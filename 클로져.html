@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <body>
+        <script>
+            var list = ["라면", "계란"]
+            var text = []
+            for(var i = 0; i < 2; i++){
+                text[i] = function(id) {
+                    return function(){
+                        return list[id];
+                    }
+                }(i);
+            }
+
+            for(var index in text) {
+                console.log(text[index]());
+            }
+        </script>
+    </body>
+</html>
