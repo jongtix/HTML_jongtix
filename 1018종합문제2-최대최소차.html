@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <body>
+        <input type="text" id="input1">
+        <button id="btn">결과</button>
+        <p id="demo"></p>
+
+        <script>
+            document.getElementById("btn").onclick = run;
+
+            function run() {
+                var inpV = document.getElementById("input1").value;
+                var arr = new Array();
+                var res = inpV.split(",");
+                console.log(res);
+                console.log(parseInt(res[5]));
+                for(i=0; i<res.length; i++) {
+                    if (isNaN(parseInt(res[i])) || Number(res[i]) != parseInt(res[i])) {
+                        return document.getElementById("demo").innerHTML = "오류";
+                    } else {
+                        arr[i] = Number(res[i]);
+                    }
+                }
+                console.log(arr);
+                console.log(typeof arr[0]);
+                arr.sort(function(a, b){ return a - b });
+                console.log(arr);
+                document.getElementById("demo").innerHTML = Number(arr[arr.length - 1]) - Number(arr[0]);
+            }
+        </script>
+    </body>
+</html>

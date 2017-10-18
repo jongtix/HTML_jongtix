@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <body>
+        <input type="number" id="inp1">
+        <input type="number" id="inp2">
+        <button id="btn">최대 공약수는?</button>
+        <br>
+        <p id="demo"></p>
+
+        <script>
+            document.getElementById("btn").onclick = showGCD;
+
+            function showGCD() {
+                var inpV1 = document.getElementById("inp1").value;
+                var inpV2 = document.getElementById("inp2").value;
+                var gcd = function(a, b) {
+                    if (!b) {
+                        return a;
+                    }
+                    return gcd(b, a%b);
+                };
+                
+                document.getElementById("demo").innerHTML = gcd(inpV1, inpV2);
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <body>
+        <input type="text" id="input1">
+        <button id="btn">변환</button>
+        <p id="demo"></p>
+
+        <script>
+            document.getElementById("btn").onclick = changeInp;
+            function changeInp() {
+                var inpV = document.getElementById("input1").value;
+                console.log(inpV);
+                var res = inpV.split("");
+                for (i=0; i<res.length; i++){
+                    if (res[i] == res[i].toUpperCase()) {
+                        res[i] = res[i].toLowerCase();
+                    }
+                    else {
+                        res[i] = res[i].toUpperCase();
+                    }
+                }
+                document.getElementById("demo").innerHTML = res.join("");
+            }
+        </script>
+    </body>
+</html>
