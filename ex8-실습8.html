@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <img src="C:\Users\Public\Pictures\Sample Pictures/Penguins.jpg" alt="팽귄" id="i">
+        <script>
+            // 방법 1
+            /* var X = document.getElementById("i");
+            X.addEventListener("click", bigger());
+            function bigger() {
+                var xDeg = 1;
+                return function() {
+                    X.style.transform = "scale(" + (xDeg%4 + 1) + ",1)";
+                    xDeg += 1;
+                }
+            }
+            */
+            // 방법 2
+            var X = document.getElementById("i");
+            var xDeg = 1;
+            X.addEventListener("click", function() {
+                X.style.transform = "scale(" + (xDeg%4 + 1) + ",1)";
+                xDeg += 1;
+            });
+        </script>
+    </body>
+</html>

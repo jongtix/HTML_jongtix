@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <body>
+        <h3>라면을 만드는데 필요한 재료</h3>
+        <input type="text" id="input1">
+        <button id="button1">입력</button>
+        <hr>
+        <script>
+            document.getElementById("button1").onclick = function() {
+                var inputVal = document.getElementById("input1").value;
+                var addli = "<li>" + inputVal + "</li>";
+                document.getElementsByTagName("ul")[0].appendChild("addli");
+            }
+           
+            
+            console.log(inputVal);
+            console.log(itemlist);
+            
+            
+            console.log(itemlist);
+            var newUl = document.createElement('ul');
+            document.body.appendChild(newUl);
+            for(var i = 0; i < itemlist.length; i++) {
+                var newLi = document.createElement('li');
+                newLi.innerHTML = itemlist[i];
+                document.getElementsByTagName("ul")[0].appendChild(newLi);
+            }
+        </script>
+    </body>
+</html>

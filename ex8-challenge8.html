@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            .nub {
+                font-size: 40px;
+            }
+            span#title {
+                background-color: skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>겜블링 게임</h1>
+        <p>각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.</p>
+        <hr>
+        <span id="title">
+            <span class="nub">0</span>
+            <span class="nub">0</span>
+            <span class="nub">0</span>
+        </span>
+        <p id="result"></p>
+        <script>
+            var geT = document.getElementsByClassName("nub");
+            var res = document.getElementById("result");
+            // 숫자 눌렀을 때 랜덤 결과 출력
+            var i;
+            for (i=0; i<geT.length; i++) {
+                geT[i].addEventListener("click", function () { 
+                    var y = i;
+                    return function () { changeN(y); }
+                 } () );
+            };
+            function changeN(obj) {
+                    var X = Math.floor(Math.random() * 3);
+                    document.getElementsByClassName("nub")[obj].innerHTML = X;
+            }
+            //
+            // 세 번째 숫자 눌렀을 때 result 출력
+            geT[2].addEventListener("click", resultP);
+            function resultP() {
+                if (geT[0].innerHTML === geT[1].innerHTML && geT[1].innerHTML === geT[2].innerHTML) {
+                    res.innerHTML = "Success(click here to do again)";
+                }
+                else {
+                    res.innerHTML = "fail(click here to do again)";
+                }
+            }
+            //            
+            // result 눌렀을 때 reset
+            res.addEventListener("click", reset);
+            function reset() {
+                geT[0].innerHTML = "0"
+                geT[1].innerHTML = "0"
+                geT[2].innerHTML = "0"
+            }
+            //
+            console.log(document.getElementsByTagName("p")[1].innerHTML);
+            console.log(geT[0].innerHTML);
+            console.log(geT[1].innerHTML);
+            console.log(geT[2].innerHTML);
+        </script>
+    </body>
+</html>

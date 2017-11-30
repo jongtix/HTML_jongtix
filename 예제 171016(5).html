@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <body>
+        <input type="number" id="answer">
+        <button onclick="check()">Check!</button>
+        <p id="demo"></p>
+        <script>
+            var ans = parseInt(Math.random()*100 + 1);
+            function check() {
+                var cosA = document.getElementById("answer").value;
+                console.log(cosA);
+                if (cosA == ans) {
+                    document.getElementById("demo").innerHTML = "정답입니다. 축하합니다.";
+                } else if (cosA > ans) {
+                    document.getElementById("demo").innerHTML = "작은 수를 입력하세요.";
+                } else if (cosA < ans) {
+                    document.getElementById("demo").innerHTML = "큰 수를 입력하세요.";
+                }
+            }
+        </script>
+    </body>
+</html>

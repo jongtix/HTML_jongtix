@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <body>
+        <script>
+            var val = prompt("입력", "");
+            var res = val.split(",");
+            console.log(res);
+            console.log(res[0]);
+            console.log(Number(res[0]));
+            console.log(res.length);
+            
+            var i = 0;
+            var num = 1;
+            do {
+                num = num * res[i];
+                i++;
+            } while (i < res.length);
+            console.log(num);
+
+            if (num > 0) {
+                document.write("양수");
+            } else if (num < 0) {
+                document.write("음수");
+            } else if (num = 0) {
+                document.write("0");
+            }
+        </script>
+    </body>
+</html>

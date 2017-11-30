@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 3px;
+        }
+
+        table {
+            width: 50%;
+        }
+
+        tr {
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th class="CN1"></th>
+            <th class="CN2"></th>
+            <th class="CN3"></th>
+            <th class="CN4"></th>
+        </tr>
+        <tr>
+            <th class="CN1"></th>
+            <td class="CN2"></td>
+            <td class="CN3"></td>
+            <td class="CN4"></td>
+        </tr>
+        <tr>
+            <th class="CN1"></th>
+            <td class="CN2"></td>
+            <td class="CN3"></td>
+            <td class="CN4"></td>
+        </tr>
+        <tr>
+            <th class="CN1"></th>
+            <td class="CN2"></td>
+            <td class="CN3"></td>
+            <td class="CN4"></td>
+        </tr>
+        <tr>
+            <th class="CN1"></th>
+            <td class="CN2"></td>
+            <td class="CN3"></td>
+            <td class="CN4"></td>
+        </tr>
+    </table>
+    <p id="haha">asdflkasjf</p>
+    <script>
+        var text = "";
+        var I = 1;
+        for (; I < 5;) {
+            text = "CN" + I;
+            var X = document.getElementsByClassName(text);
+            //document.write(text + " ");
+            console.log(text + " ");
+
+            var i;
+            for (i = 0; i < X.length; i++) {
+                X[i].addEventListener("mouseover", function () {
+                    var y = X;
+                    console.log(y);
+                    return function () { ccRed(y); }
+                }());
+                
+                X[i].addEventListener("mouseout", function () {
+                    var y = X;
+                    console.log(y);
+
+                    return function () { ccWhite(y); }
+                }());
+
+                //document.getElementById("haha").innerHTML = text;
+            };
+            I++;
+            //document.write(text + "<br>");
+            console.log(text + "<br>");
+        }
+
+        console.log(X);
+
+        function ccRed(t) {
+            t[0].style.backgroundColor = "red";
+        }
+        function ccWhite(t) {
+            t[0].style.backgroundColor = "white";
+        }
+
+            /* 완성본
+
+            var X = document.getElementsByClassName("CN1");
+            var i;
+            for(i=0,i<X.length,i++) {
+                X[i].addEventListener("mouseover",ccRed);
+                X[i].addEventListener("mouseout",ccWhite);
+            }
+
+            function ccRed() {
+                X[0].style.backgroundColor = red;
+            }
+            function ccWhite() {
+                X[0].style.backgroundColor = white;
+            }
+            */
+    </script>
+</body>
+
+</html>

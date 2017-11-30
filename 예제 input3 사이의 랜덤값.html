@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <input type="number" id="in1">
+        <input type="number" id="in2">
+        <button onclick="newI()">submit</button>
+        <p id="demo"></p>
+        <script>
+            function newI() {
+                var num1 = document.getElementById('in1').value;
+                var num2 = document.getElementById('in2').value;
+                console.log( num1 === "1");
+                var max = Math.max(num1, num2);
+                var min = Math.min(num1, num2);
+                function getRndInteger(min, max) {
+                    return Math.floor(Math.random() * (max - min)) + min;
+                }
+                document.getElementById("demo").innerHTML = getRndInteger(min, max);
+            }
+        </script>
+    </body>
+</html>

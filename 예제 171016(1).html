@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <body>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button onclick="bigN()">큰 수</button>        
+        <button onclick="smallN()">작은 수</button>
+        <p id="demo"></p>
+
+        <script>
+            
+            function bigN() {
+                var num1 = Number(document.getElementById("num1").value);
+                var num2 = Number(document.getElementById("num2").value);
+                if (num1 > num2) {
+                    document.getElementById("demo").innerHTML = num1;
+                } else if (num1 < num2) {
+                    document.getElementById("demo").innerHTML = num2;
+                } else if (num1 == num2) {
+                    document.getElementById("demo").innerHTML = "두 수는 같다."
+                } else {
+                    document.getElementById("demo").innerHTML = "값을 다시 입력하세요";
+                }
+            }
+
+            function smallN() {
+                var num1 = Number(document.getElementById("num1").value);
+                var num2 = Number(document.getElementById("num2").value);
+                if (num1 < num2) {
+                    document.getElementById("demo").innerHTML = num1;
+                } else if (num1 > num2) {
+                    document.getElementById("demo").innerHTML = num2;
+                } else if (num1 == num2) {
+                    document.getElementById("demo").innerHTML = "두 수는 같다."
+                } else {
+                    document.getElementById("demo").innerHTML = "값을 다시 입력하세요";
+                }
+            }           
+            
+        </script>
+    </body>
+</html>

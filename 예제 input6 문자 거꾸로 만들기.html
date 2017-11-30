@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <body>
+        <input type="text">
+        <button onclick="rev()">거꾸로!</button>
+        <p id="demo"></p>
+        <script>
+            function rev() {
+                var str = document.getElementsByTagName("input")[0].value;
+                var res = str.split("");
+                console.log(res);
+                var re = res.reverse();
+                var revletter = re.join("");
+                document.getElementById("demo").innerHTML = revletter;
+            }
+        </script>
+    </body>
+</html>

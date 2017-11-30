@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>라면을 끓이는 순서</title>
+    </head>
+    <body>
+        <h3>라면을 끓이는 순서</h3>
+        <hr>
+        <ol type="A" style="background-color:yellowgreen">
+            <li>물을 끓인다.</li>
+        </ol>
+    
+        <script>
+            var X = document.getElementsByTagName("ol")[0]
+            X.addEventListener("click",addCom);
+
+            function addCom() {
+                var text =
+                prompt("라면을 끓이는 순서를 입력하라.", "");
+                var newLi = document.createElement("li");
+                newLi.innerHTML = text;
+                X.appendChild(newLi);
+            }
+        </script>
+    </body>
+</html>

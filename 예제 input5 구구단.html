@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <body>
+        <input type="number">
+        <button onclick="구구단()">구구단</button>
+        <div id="demo"></div>
+
+        <script>
+            function 구구단(n) {
+                var n = parseInt(document.getElementsByTagName("input")[0].value);
+                console.log(n);
+                var text = "";
+                var i = 1;
+                do {
+                    text = text + n + ' * ' + i + " = " + n*i + "<br>";
+                    i++;
+                } while(i < 10)
+                document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <img src="C:\Users\Public\Pictures\Sample Pictures/Penguins.jpg" alt="팽귄" id="i">
+        <script>
+            var X = document.getElementById("i");
+            var xDeg = 1;
+            X.addEventListener("click", function() {
+                                            X.style.transform = "rotate(" + 90*xDeg + "deg)";
+                                            xDeg += 1;
+                                        });
+        </script>
+    </body>
+</html>

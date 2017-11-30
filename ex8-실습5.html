@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>z-index 스타일 프로퍼티</title>
+        <style>
+            div {
+                position: absolute;
+            }
+            img {
+                position: absolute;
+                width: 500px;
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>z-index 스타일 프로퍼티</h3>        
+        <hr>
+        <div>
+            <img src="C:\Users\Public\Pictures\Sample Pictures/Chrysanthemum.jpg" alt="스페이드A" width="100" height="140">
+            <img src="C:\Users\Public\Pictures\Sample Pictures/Desert.jpg" alt="스페이드2" width="100" height="140">
+            <img src="C:\Users\Public\Pictures\Sample Pictures/Penguins.jpg" alt="스페이드3" width="100" height="140">
+            <img src="C:\Users\Public\Pictures\Sample Pictures/Tulips.jpg" alt="스페이드7" width="100" height="140">
+        </div>
+        <script>
+            var X = document.getElementsByTagName("img");
+            for(var i = 0; i < X.length; i++){
+                X[i].addEventListener("click", function() {
+                                                    this.style.zIndex -= 1;
+                });
+            }
+        </script>
+    </body>
+</html>

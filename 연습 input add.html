@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <body>
+        <input type="text" id="idea">
+        <br>
+        <input type="button" id="add">
+
+        <ul id="list"></ul>
+
+        <script>
+            document.getElementById("add").onclick = function() {
+                var text = document.getElementById("idea").value;
+                var li = "<li>" + text + "</li>";
+                console.log(typeof li);
+                var node = document.createElement("li");
+                var textnode = document.createTextNode(text);
+                node.appendChild(li);
+                document.getElementById("list").appendChild(node);
+            }
+        </script>
+    </body>
+</html>

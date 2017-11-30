@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <body>
+        <h3>eval()로 수식 계산</h3>
+        <hr>
+
+        <script>
+            do {
+                var val = prompt("수식 입력", "");
+                var res = eval(val);
+                var text = "";
+                text = res;
+            } while(isNaN(res));
+            document.write(val + " = " + text);
+        </script>
+    </body>
+</html>

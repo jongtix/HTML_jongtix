@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>2</title>
+    </head>
+    <body>
+        <p id="star"></p>
+        <script>
+            function pr(a, b) {
+                var oh = "";
+                var i = 1;
+                do {
+                    oh += a;
+                    i++;
+                    console.log(oh);
+                    document.getElementById("star").innerHTML = oh;
+
+                } while (i <= b);
+            }
+        </script>
+        <script>
+            pr("%", 5);
+        </script>
+    </body>
+</html>
