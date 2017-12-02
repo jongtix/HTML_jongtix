@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+
+	</head>
+	<body>
+		<h3>정수 5개 입력받아 역순으로 출력</h3>
+		<hr>
+		<script>
+			var plots = [5];
+			document.write("입력된 수의 배열<br>");
+			for(i = 0; i < 5; i++) {
+				var val = prompt("정수 입력", "");
+				if(val == parseInt(val)) {
+					plots[i] = val;
+				} else {
+					notT();
+				}
+				document.write(plots[i] + " ");
+			}
+			document.write("<hr>");
+			document.write("역순으로 재정렬된 배열<br>");
+			var rev = [5]
+			rev = plots.reverse();
+			for(i = 0; i < 5; i++)
+				document.write(rev[i] + " ");
+			
+			function notT() {
+				do {
+					val = prompt("다시 입력하세요. (정수를 입력하세요.)", "");
+				} while (val != parseInt(val));
+				plots[i] = val;
+			}
+		</script>
+	</body>
+</html>

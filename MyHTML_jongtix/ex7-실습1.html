@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<title>난수</title>
+	</head>
+	<body>
+		<h3>난수 10개 생성</h3>
+		<hr>
+		<script>
+			var n = []; // 배열 n 선언
+			for(var i = 0; i < 10; i++) { //난수 10개 배열에 저장
+				n[i] = parseInt(Math.random()*100+1);
+				var plots = n;
+			}
+
+			for(var i = 0; i < 10; i++) //배열 출력
+				document.write(n[i] + " ");
+			document.write("<hr>");
+
+			var big = n[0]; // big은 제일 큰 수 저장
+			for(var i = 0; i < 10; i++) { // 큰 수 찾기
+				big = Math.max.apply(null, n);
+			}
+
+			document.write("제일 큰 수는 " + big);
+			document.write("<hr>");
+
+			n.sort(function(a, b){return a - b});// 배열 정렬
+
+			for(var i = 0; i < 10; i++)
+				document.write(n[i] + " ");// 배열 출력
+		</script>
+	</body>	
+</html>

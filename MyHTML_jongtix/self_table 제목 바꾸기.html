@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 3px;
+            }
+            table {
+                width: 50%;
+            }
+            tr {
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th class="ColumnNum1"></th>
+                <th class="Column!">ㄱ</th>
+                <th class="Column!">ㄴ</th>
+                <th class="Column!">ㄷ</th>
+            </tr>
+            <tr>
+                <th class="ColumnNum1">1</th>
+                <td class="Column!">sr</td>
+                <td class="Column!">e</td>
+                <td class="Column!">ag</td>
+            </tr>
+            <tr>
+                <th class="ColumnNum1">2</th>
+                <td class="Column!">adsf</td>
+                <td class="Column!">asdf</td>
+                <td class="Column!">asdf</td>
+            </tr>
+            <tr>
+                <th class="ColumnNum1">3</th>
+                <td class="Column!">sadd</td>
+                <td class="Column!">ssd</td>
+                <td class="Column!">sdfff</td>
+            </tr>
+            <tr>
+                <th class="ColumnNum1">4</th>
+                <td class="Column!">ff</td>
+                <td class="Column!">ffff</ftd>
+                <td class="Column!">asdfffsaf</td>
+            </tr>
+        </table>
+        <p id='JTG'></p>
+
+        <script>
+            /* document.getElementsByClassName('JTG')[0].addEventListener("mouseover",Changess); */
+            var MM = document.getElementsByClassName('ColumnNum1');
+            document.getElementById('JTG').innerHTML = MM.length;
+            function ColumnSelect() {
+                var X = document.getElementsByClassName('ColumnNum1');
+                var i;
+                for (i = 0; i < X.length; i++) {
+                    
+                    document.getElementsByClassName('ColumnNum1')[i].addEventListener("mouseover",obj);
+                    function obj() {
+                        document.getElementsByClassName('JTG')[0].style.backgroundColor="red";
+                    }
+                }
+                
+                document.getElementById('JTG').innerHTML = 'X.length';
+            }
+
+
+            
+            /*
+            document.getElementsByTagName("th")[0].addEventListener("mouseover", Color1ST);
+            document.getElementsByTagName("th")[4].addEventListener("mouseover", Color1ST);
+            document.getElementsByTagName("th")[5].addEventListener("mouseover", Color1ST);
+            document.getElementsByTagName("th")[6].addEventListener("mouseover", Color1ST);
+            document.getElementsByTagName("th")[7].addEventListener("mouseover", Color1ST);
+            document.getElementsByTagName("th")[0].addEventListener("mouseout", Color1ST0);
+            document.getElementsByTagName("th")[4].addEventListener("mouseout", Color1ST0);
+            document.getElementsByTagName("th")[5].addEventListener("mouseout", Color1ST0);
+            document.getElementsByTagName("th")[6].addEventListener("mouseout", Color1ST0);
+            document.getElementsByTagName("th")[7].addEventListener("mouseout", Color1ST0);
+            function Color1ST() {
+                document.getElementsByTagName("th")[0].style.backgroundColor='red';
+            }
+            function Color1ST0() {
+                document.getElementsByTagName("th")[0].style.backgroundColor='white';
+            }
+
+            document.getElementsByTagName("th")[1].addEventListener("mouseover", Color2nd);
+            document.getElementsByTagName("td")[0].addEventListener("mouseover", Color2nd);
+            document.getElementsByTagName("td")[3].addEventListener("mouseover", Color2nd);
+            document.getElementsByTagName("td")[6].addEventListener("mouseover", Color2nd);
+            document.getElementsByTagName("td")[9].addEventListener("mouseover", Color2nd);
+            document.getElementsByTagName("th")[1].addEventListener("mouseout", Color2nd0);
+            document.getElementsByTagName("td")[0].addEventListener("mouseout", Color2nd0);
+            document.getElementsByTagName("td")[3].addEventListener("mouseout", Color2nd0);
+            document.getElementsByTagName("td")[6].addEventListener("mouseout", Color2nd0);
+            document.getElementsByTagName("td")[9].addEventListener("mouseout", Color2nd0);
+            function Color2nd() {
+                document.getElementsByTagName("th")[1].style.backgroundColor='blue';
+            }
+            function Color2nd0() {
+                document.getElementsByTagName("th")[1].style.backgroundColor='white';
+            }
+
+            document.getElementsByTagName("th")[2].addEventListener("mouseover", Color3rd);
+            document.getElementsByTagName("td")[1].addEventListener("mouseover", Color3rd);
+            document.getElementsByTagName("td")[4].addEventListener("mouseover", Color3rd);
+            document.getElementsByTagName("td")[7].addEventListener("mouseover", Color3rd);
+            document.getElementsByTagName("td")[10].addEventListener("mouseover", Color3rd);
+            document.getElementsByTagName("th")[2].addEventListener("mouseout", Color3rd0);
+            document.getElementsByTagName("td")[1].addEventListener("mouseout", Color3rd0);
+            document.getElementsByTagName("td")[4].addEventListener("mouseout", Color3rd0);
+            document.getElementsByTagName("td")[7].addEventListener("mouseout", Color3rd0);
+            document.getElementsByTagName("td")[10].addEventListener("mouseout", Color3rd0);
+            function Color3rd() {
+                document.getElementsByTagName("th")[2].style.backgroundColor='yellow';
+            }
+            function Color3rd0() {
+                document.getElementsByTagName("th")[2].style.backgroundColor='white';
+            }
+
+            document.getElementsByTagName("th")[3].addEventListener("mouseover", Color4th);
+            document.getElementsByTagName("td")[2].addEventListener("mouseover", Color4th);
+            document.getElementsByTagName("td")[5].addEventListener("mouseover", Color4th);
+            document.getElementsByTagName("td")[8].addEventListener("mouseover", Color4th);
+            document.getElementsByTagName("td")[11].addEventListener("mouseover", Color4th);
+            document.getElementsByTagName("th")[3].addEventListener("mouseout", Color4th0);
+            document.getElementsByTagName("td")[2].addEventListener("mouseout", Color4th0);
+            document.getElementsByTagName("td")[5].addEventListener("mouseout", Color4th0);
+            document.getElementsByTagName("td")[8].addEventListener("mouseout", Color4th0);
+            document.getElementsByTagName("td")[11].addEventListener("mouseout", Color4th0);
+            function Color4th() {
+                document.getElementsByTagName("th")[3].style.backgroundColor='purple';
+            }
+            function Color4th0() {
+                document.getElementsByTagName("th")[3].style.backgroundColor='white';
+            }
+            */
+            
+            /*document.getElementsByTagName("col")[0].sytle.backgroundColor='red';
+
+            function demo() {
+                var num;
+                if (num == 0 or 4 or 8 or 12 or 16) {
+                    document.getElementsByTagName("th")[0].style.backgroundColor='red';
+                } else if (num == 1 or 5 or 9 or 13 or 17) {
+                    document.getElementsByTagName("th")[1].style.backgroundColor='blue';
+                } else if (num == 2 or 6 or 10 or 14 or 18) {
+                    document.getElementsByTagName("th")[2].style.backgroundColor='yellow';
+                } else {
+                    document.getElementsByTagName("th")[3].style.backgroundColor='white';
+                }
+            } // if를 어떻게 사용하는지 모르겠음.*/
+                
+            
+            
+
+            /* var X = document.getElementsByTagName("col")[0];
+                X.style.backgroundColor = 'red';
+                X.addEventListener("mouseover",Change);
+                /*document.getElementsByTagName("th")[0].addEventListener("mouseover",Change);
+                document.getElementsByTagName("td")[0].addEventListener("mouseover",Change);
+            
+
+            function Change() {
+                document.getElementsByClassName("tableHead")[0].style.backgroundColor='red';
+            } */
+            
+            /*document.getElementsByTagName("col")[0].style.backgroundColor='red';*/
+
+            /*function colorChange() {
+            document.getElementsByTagName("th")[0].style.backgroundColor = 'red';
+            }*/
+            
+            /* function tableHeadColor(id) {
+                id.getElementsByClassName("tableHead")
+                document.getElementsByClassName("tableHead")[0].mouse
+                backgroundColor = 'red';
+            } */
+        </script>
+    </body>
+</html>
